@@ -23,8 +23,8 @@
                         "soft-blush": "#FFF0F5",
                     },
                     fontFamily: {
-                        "sans": ["Montserrat", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["Google Sans", "Roboto", "Arial", "sans-serif"],
+                        "serif": ["Google Sans", "Roboto", "Arial", "sans-serif"],
                     },
                     borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "4rem", "full": "9999px"},
                     keyframes: {
@@ -109,11 +109,12 @@
 <a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="#contact">Contact</a>
 </div>
 <div class="flex md:hidden">
-<button class="p-2 text-onyx">
-<span class="material-symbols-outlined">menu</span>
+<button id="mobile-menu-btn" class="p-2 text-pink hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
+<!-- Mobile Menu Overlay Removed -->
 </nav>
 <header class="relative w-full min-h-[90vh] flex flex-col lg:flex-row overflow-hidden">
 <div class="w-full lg:w-[55%] bg-soft-blush flex flex-col justify-center px-6 lg:pl-24 lg:pr-12 py-20 lg:py-0 relative z-30">
@@ -366,20 +367,26 @@
                         Have a question about a product or want to inquire about coaching availability? Fill out the form or send an email directly.
                     </p>
 <div class="flex flex-col gap-4 mt-2">
-<a class="flex items-center gap-3 text-white/90 hover:text-primary transition-colors group font-sans" href="mailto:hello@carmencavanagh.com">
-<span class="material-symbols-outlined group-hover:scale-110 transition-transform">mail</span>
-<span class="text-sm font-medium">hello@carmencavanagh.com</span>
+<a id="email-copy-link" class="flex items-center gap-3 text-white/90 hover:text-primary transition-colors group font-sans cursor-pointer" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">content_copy</span>
+<span class="text-sm font-medium">carmencavanaghdoherty@gmail.com</span>
 </a>
 <div class="flex items-center gap-6 mt-4">
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="#">
-<span class="text-xs font-bold font-sans">IG</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="#">
-<span class="text-xs font-bold font-sans">PT</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="#">
-<span class="text-xs font-bold font-sans">TT</span>
-</a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="https://www.instagram.com/carmencavanagh/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="mailto:carmencavanaghdoherty@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="https://www.tiktok.com/@carmencavanaghx" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.48-1.48 1.37-3.43 2.16-5.44 2.16-5.54 0-10.05-4.51-10.05-10.05 0-5.54 4.51-10.05 10.05-10.05.07 0 .13.01.2.01v4.03c-.04 0-.09-.01-.13-.01-3.32 0-6.02 2.7-6.02 6.02 0 3.32 2.7 6.02 6.02 6.02 3.32 0 6.02-2.7 6.02-6.02V.02z"/>
+        </svg>
+    </a>
 </div>
 </div>
 </div>
@@ -396,7 +403,7 @@
 </div>
 <div class="w-full h-px bg-white/10 my-12"></div>
 <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/50 uppercase tracking-[1px] font-sans">
-<p>© 2024 Carmen Cavanagh Doherty. All Rights Reserved.</p>
+<p>© 2026 Carmen Cavanagh Doherty. All Rights Reserved.</p>
 <div class="flex gap-8">
 <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
 <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
@@ -404,5 +411,101 @@
 </div>
 </div>
 </footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col h-screen w-screen">
+    <div class="flex items-center justify-between px-6 lg:px-24 h-24 border-b border-gray-100 flex-shrink-0">
+        <a href="#" class="flex items-center">
+            <img src="images/logo.png" alt="Carmen Cavanagh Doherty" class="h-12 w-auto object-contain" />
+        </a>
+        <button id="close-menu-btn" class="p-2 text-pink hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col flex-1 px-8 py-8 gap-2 overflow-y-auto">
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="#">
+            Home
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="#about">
+            About
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="#shop">
+            Shop
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="#contact">
+            Contact
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        
+        <div class="mt-8">
+            <a href="#shop" class="flex items-center justify-center h-14 w-full bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 font-sans mobile-link">
+                Shop Digital Tools
+            </a>
+        </div>
+        
+        <div class="flex items-center justify-center gap-6 mt-8">
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="https://www.instagram.com/carmencavanagh/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="mailto:carmencavanaghdoherty@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="https://www.tiktok.com/@carmencavanaghx" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.48-1.48 1.37-3.43 2.16-5.44 2.16-5.54 0-10.05-4.51-10.05-10.05 0-5.54 4.51-10.05 10.05-10.05.07 0 .13.01.2.01v4.03c-.04 0-.09-.01-.13-.01-3.32 0-6.02 2.7-6.02 6.02 0 3.32 2.7 6.02 6.02 6.02 3.32 0 6.02-2.7 6.02-6.02V.02z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="p-8 text-center bg-soft-blush/30 flex-shrink-0">
+         <p class="text-xs font-bold font-sans text-onyx/40 uppercase tracking-[2px]">Grow • Monetize • Connect</p>
+    </div>
+</div>
+
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('translate-x-full');
+        document.body.classList.toggle('overflow-hidden');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    // Email Copy Functionality
+    const emailCopyLink = document.getElementById('email-copy-link');
+    if (emailCopyLink) {
+        emailCopyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = "carmencavanaghdoherty@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const textSpan = this.querySelector('span.text-sm');
+                const originalText = textSpan.innerText;
+                textSpan.innerText = "Copied to clipboard!";
+                
+                setTimeout(() => {
+                    textSpan.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    }
+</script>
 
 </body></html>
