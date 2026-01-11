@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up | Carmen Cavanagh Doherty</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                        "onyx": "#1b0d11",
+                        "pink": "#ee2b5b",
+                        "soft-pink": "#fcf0f3",
+                        "neutral-creme": "#F9F7F2",
+                        "border-pink": "#f3e7ea",
+                        "soft-blush": "#FFF0F5",
+                    },
+                    fontFamily: {
+                        "sans": ["Montserrat", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "4rem", "full": "9999px"},
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'marquee': 'marquee 30s linear infinite',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e0e0e0; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ccc; 
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-onyx font-sans antialiased h-screen w-screen overflow-hidden flex flex-col selection:bg-primary/20 selection:text-primary leading-[1.6]">
+<div class="bg-pink text-white overflow-hidden py-3 relative z-[60] flex-none">
+<div class="flex">
+<div class="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+</div>
+<div class="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+</div>
+</div>
+</div>
+<nav class="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-border-pink">
+<div class="w-full mx-auto px-4 md:px-6 lg:px-24 h-24 flex items-center justify-between">
+<a href="index.html" class="flex items-center">
+    <img src="images/logo.png" alt="Carmen Cavanagh Doherty" class="h-12 md:h-16 w-auto object-contain" />
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html">Home</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#about">About</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#shop">Shop</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#contact">Contact</a>
+<div class="flex items-center gap-4 ml-4 border-l border-gray-200 pl-6">
+    <a href="cart.html" class="text-onyx/80 hover:text-primary transition-colors relative group" title="Cart">
+        <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full font-bold cart-count-badge transition-opacity duration-300">0</span>
+    </a>
+    <a href="signup.html" class="text-pink hover:text-primary transition-colors" title="Profile">
+        <span class="material-symbols-outlined text-2xl">person</span>
+    </a>
+</div>
+</div>
+<div class="flex md:hidden items-center gap-4">
+    <a href="cart.html" class="text-pink hover:text-primary transition-colors relative" title="Cart">
+        <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 w-3 h-3 bg-primary text-white text-[8px] flex items-center justify-center rounded-full font-bold cart-count-badge transition-opacity duration-300">0</span>
+    </a>
+    <a href="signup.html" class="text-pink hover:text-primary transition-colors" title="Profile">
+        <span class="material-symbols-outlined text-2xl">person</span>
+    </a>
+<button id="mobile-menu-btn" class="text-pink hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col h-screen w-screen hidden">
+    <div class="flex items-center justify-between px-6 lg:px-24 h-24 border-b border-gray-100 flex-shrink-0">
+        <a href="index.html" class="flex items-center">
+            <img src="images/logo.png" alt="Carmen Cavanagh Doherty" class="h-12 w-auto object-contain" />
+        </a>
+        <button id="close-menu-btn" class="p-2 text-pink hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col flex-1 px-8 py-8 gap-2 overflow-y-auto">
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html">
+            Home
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#about">
+            About
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#shop">
+            Shop
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#contact">
+            Contact
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        
+        <div class="mt-8">
+            <a href="index.html#shop" class="flex items-center justify-center h-14 w-full bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 font-sans mobile-link">
+                Shop Digital Tools
+            </a>
+        </div>
+        
+        <div class="flex items-center justify-center gap-6 mt-8">
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60 relative" href="cart.html" title="Cart">
+                <span class="material-symbols-outlined text-lg">shopping_bag</span>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full font-bold border-2 border-white">0</span>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="signup.html" title="Profile">
+                <span class="material-symbols-outlined text-lg">person</span>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="https://www.instagram.com/carmencavanagh/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+</nav>
+<section class="flex-1 flex flex-col lg:flex-row bg-white relative overflow-hidden">
+<div class="lg:w-1/2 w-full h-48 lg:h-auto bg-cover bg-center relative order-1 lg:order-1 flex-none" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZpFdZ6x3UpDQOmnHMBcjRXtYKFZ7EfffG5-y001Wkq82Evb2h-HeThnrgYMpgeXaBqOHXZ9V79dwM_3_dlsj9IhAQjqCUDIdvPJawmORXxaVL5eLT2YzkesGzBo1bUM_NAD6ekmFMDUs0rCqs8PB9GXrElZk4XiWEL6zMtmXG4XfHLuGK6376Lz-p0YeWndZJocULTaqjgzir9MADoAtwlt7xyXp-LufQ8QRh7KzQoKx4gZNhhekZs_AfnV7THbo6XpjRHHbvH5aT");'>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-12 lg:p-20 text-white">
+<h3 class="font-serif text-3xl lg:text-4xl font-bold mb-4 drop-shadow-md">Elevate Your Influence</h3>
+<p class="font-sans text-sm font-medium tracking-wide uppercase opacity-90 drop-shadow-md">Join the community of 10k+ creators</p>
+</div>
+</div>
+<div class="lg:w-1/2 w-full flex-1 lg:flex-none lg:h-full flex items-center justify-center p-8 lg:p-16 order-2 lg:order-2 bg-white overflow-y-auto">
+<div class="w-full max-w-md flex flex-col gap-6 animate-fade-in-up my-auto">
+<div class="flex flex-col gap-2 text-center lg:text-left">
+<span class="text-primary font-bold uppercase tracking-[2px] text-xs font-sans">Start Your Journey</span>
+<h1 class="text-4xl lg:text-5xl font-serif font-bold text-onyx">Create Account</h1>
+<p class="text-onyx/60 font-sans mt-2">Enter your details to access exclusive resources and coaching.</p>
+</div>
+<form class="flex flex-col gap-5">
+<div class="space-y-5">
+<div class="relative group">
+<label class="sr-only" for="name">Full Name</label>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-onyx/30 group-focus-within:text-primary transition-colors">person</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-background-light border border-transparent rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-onyx/40 text-sm font-sans" id="name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div class="relative group">
+<label class="sr-only" for="email">Email Address</label>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-onyx/30 group-focus-within:text-primary transition-colors">mail</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-background-light border border-transparent rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-onyx/40 text-sm font-sans" id="email" placeholder="Email Address" required="" type="email"/>
+</div>
+<div class="relative group">
+<label class="sr-only" for="password">Password</label>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-onyx/30 group-focus-within:text-primary transition-colors">lock</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-background-light border border-transparent rounded-xl focus:bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-onyx/40 text-sm font-sans" id="password" placeholder="Password" required="" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 text-primary bg-background-light border-gray-300 rounded focus:ring-primary" id="terms" type="checkbox"/>
+<label class="text-xs text-onyx/60 font-sans" for="terms">
+                        I agree to the <a class="text-onyx underline hover:text-primary transition-colors" href="#">Terms &amp; Conditions</a>
+</label>
+</div>
+<button class="h-14 mt-2 w-full bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-xl hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 font-sans flex items-center justify-center gap-2 group" type="submit">
+                    Sign Up
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+
+</div>
+</div>
+</section>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        const isClosed = mobileMenu.classList.contains('translate-x-full');
+        
+        if (isClosed) {
+            // Open Menu
+            mobileMenu.classList.remove('hidden');
+            // Small delay to ensure browser registers visibility change before transform
+            requestAnimationFrame(() => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // Close Menu
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+            
+            // Wait for transition to complete before hiding
+            mobileMenu.addEventListener('transitionend', function handler() {
+                if (mobileMenu.classList.contains('translate-x-full')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                mobileMenu.removeEventListener('transitionend', handler);
+            }, { once: true });
+        }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    // Email Copy Functionality
+    const emailCopyLink = document.getElementById('email-copy-link');
+    if (emailCopyLink) {
+        emailCopyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = "carmencavanaghdoherty@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const textSpan = this.querySelector('span.text-sm');
+                const originalText = textSpan.innerText;
+                textSpan.innerText = "Copied to clipboard!";
+                
+                setTimeout(() => {
+                    textSpan.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    }
+</script>
+<script src="js/cart.js"></script>
+</body></html>

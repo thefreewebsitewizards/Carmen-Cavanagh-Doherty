@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart | Carmen Cavanagh Doherty</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b5b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                        "onyx": "#1b0d11",
+                        "pink": "#ee2b5b",
+                        "soft-pink": "#fcf0f3",
+                        "neutral-creme": "#F9F7F2",
+                        "border-pink": "#f3e7ea",
+                        "soft-blush": "#FFF0F5",
+                    },
+                    fontFamily: {
+                        "sans": ["Montserrat", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "4rem", "full": "9999px"},
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        fadeScaleUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px) scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'fade-in-up-delay-1': 'fadeInUp 1s ease-out 0.2s forwards',
+                        'fade-in-up-delay-2': 'fadeInUp 1s ease-out 0.4s forwards',
+                        'fade-in-up-delay-3': 'fadeInUp 1s ease-out 0.6s forwards',
+                        'marquee': 'marquee 30s linear infinite',
+                        'scroll-fade': 'fadeScaleUp linear forwards',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e0e0e0; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ccc; 
+        }
+        body {
+            scroll-behavior: smooth;
+        }input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-onyx font-sans antialiased overflow-x-hidden selection:bg-primary/20 selection:text-primary leading-[1.6]">
+<div class="bg-pink text-white overflow-hidden py-3 relative z-[60]">
+<div class="flex">
+<div class="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+</div>
+<div class="animate-marquee whitespace-nowrap flex-shrink-0 flex items-center">
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+<span class="mx-6 text-[11px] font-bold tracking-[1px] uppercase font-sans">GROW • MONETIZE • CONNECT • INFLUENCE</span>
+</div>
+</div>
+</div>
+<nav class="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-border-pink">
+<div class="w-full mx-auto px-4 md:px-6 lg:px-24 h-24 flex items-center justify-between">
+<a href="index.html" class="flex items-center">
+    <img src="images/logo.png" alt="Carmen Cavanagh Doherty" class="h-12 md:h-16 w-auto object-contain" />
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html">Home</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#about">About</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#shop">Shop</a>
+<a class="text-sm font-bold uppercase tracking-[1px] text-onyx/80 hover:text-primary transition-colors font-sans" href="index.html#contact">Contact</a>
+<div class="flex items-center gap-4 ml-4 border-l border-gray-200 pl-6">
+    <a href="cart.html" class="text-onyx/80 hover:text-primary transition-colors relative group" title="Cart">
+        <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full font-bold cart-count-badge transition-opacity duration-300">0</span>
+    </a>
+    <a href="signup.html" class="text-pink hover:text-primary transition-colors" title="Profile">
+        <span class="material-symbols-outlined text-2xl">person</span>
+    </a>
+</div>
+</div>
+<div class="flex md:hidden items-center gap-2">
+    <a href="cart.html" class="text-pink hover:text-primary transition-colors relative" title="Cart">
+        <span class="material-symbols-outlined text-2xl">shopping_bag</span>
+        <span class="absolute -top-1 -right-1 w-3 h-3 bg-primary text-white text-[8px] flex items-center justify-center rounded-full font-bold cart-count-badge transition-opacity duration-300">0</span>
+    </a>
+    <a href="signup.html" class="text-pink hover:text-primary transition-colors" title="Profile">
+        <span class="material-symbols-outlined text-2xl">person</span>
+    </a>
+<button id="mobile-menu-btn" class="text-pink hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay Removed -->
+</nav>
+<section class="min-h-[80vh] pt-12 pb-24 bg-background-light">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-12">
+<div class="mb-10 opacity-0 animate-fade-in-up">
+<a class="text-xs font-bold uppercase tracking-[1px] text-onyx/60 hover:text-primary transition-colors font-sans flex items-center gap-2" href="index.html#shop">
+<span class="material-symbols-outlined text-sm">arrow_back</span> Continue Shopping
+             </a>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+<div class="w-full lg:w-2/3 opacity-0 animate-fade-in-up-delay-1">
+<h1 class="text-3xl md:text-5xl font-serif font-bold text-onyx mb-10">Your Shopping Bag</h1>
+<div class="bg-white rounded-[24px] p-6 md:p-8 border border-border-pink shadow-sm">
+<div class="hidden md:grid grid-cols-12 gap-4 border-b border-border-pink pb-4 mb-8 text-[11px] font-bold uppercase tracking-[1px] text-onyx/40 font-sans">
+<div class="col-span-6">Product</div>
+<div class="col-span-2 text-center">Price</div>
+<div class="col-span-2 text-center">Quantity</div>
+<div class="col-span-2 text-right">Total</div>
+</div>
+<div id="cart-items-container"></div>
+<div class="mt-8 flex justify-between items-center">
+<p class="text-sm text-onyx/50 font-sans italic">* Digital products are delivered immediately via email.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/3 flex flex-col gap-6 opacity-0 animate-fade-in-up-delay-2 lg:sticky lg:top-32">
+<div class="bg-soft-blush rounded-[24px] p-8 border border-border-pink shadow-md relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+<h3 class="font-serif font-bold text-xl text-onyx mb-8 relative z-10">Order Summary</h3>
+<div class="space-y-4 border-b border-border-pink/80 pb-6 relative z-10">
+<div class="flex justify-between items-center text-sm font-sans font-medium">
+<span class="text-onyx/70">Subtotal</span>
+<span class="font-bold text-onyx" id="cart-subtotal">£0.00</span>
+</div>
+<div class="flex justify-between items-center text-sm font-sans font-medium">
+<span class="text-onyx/70">Tax (Estimated)</span>
+<span class="font-bold text-onyx">£0.00</span>
+</div>
+<div class="flex justify-between items-center text-sm font-sans font-medium">
+<span class="text-onyx/70">Shipping</span>
+<span class="text-primary text-[10px] font-bold uppercase tracking-wider bg-white px-2 py-1 rounded-md shadow-sm">Free (Digital)</span>
+</div>
+</div>
+<div class="py-6 flex justify-between items-end relative z-10">
+<span class="font-serif font-bold text-lg text-onyx">Total</span>
+<span class="font-serif font-bold text-3xl text-primary leading-none" id="cart-total">£0.00</span>
+</div>
+<button class="relative z-10 w-full h-14 bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-full hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 font-sans mb-5 flex items-center justify-center gap-2 group">
+                        Proceed to Checkout
+                        <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 text-onyx/40 relative z-10">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span class="text-[11px] font-sans font-semibold tracking-wide uppercase">Secure SSL Checkout</span>
+</div>
+</div>
+<div class="bg-white rounded-[24px] p-6 border border-border-pink shadow-sm">
+<label class="flex items-center gap-2 text-xs font-bold uppercase tracking-[1px] text-onyx mb-4 font-sans" for="promo">
+<span class="material-symbols-outlined text-lg text-primary">sell</span>
+                        Promo Code
+                    </label>
+<div class="flex flex-col sm:flex-row gap-3">
+<input class="w-full sm:flex-1 h-12 px-4 rounded-xl bg-background-light border-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm font-sans placeholder:text-onyx/30" id="promo" placeholder="Enter code" type="text"/>
+<button class="w-full sm:w-auto h-12 px-6 bg-onyx text-white text-[11px] font-bold uppercase tracking-[1px] rounded-xl hover:bg-primary transition-colors font-sans">Apply</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full bg-onyx text-background-light" id="contact">
+<div class="w-full mx-auto px-6 lg:px-24 py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="flex flex-col gap-8">
+<h2 class="text-4xl font-serif font-bold tracking-tight">LET'S CONNECT</h2>
+<p class="text-white/80 font-sans font-medium max-w-md leading-[1.6]">
+                        Have a question about a product or want to inquire about coaching availability? Fill out the form or send an email directly.
+                    </p>
+<div class="flex flex-col gap-4 mt-2">
+<a id="email-copy-link" class="flex items-center gap-3 text-white/90 hover:text-primary transition-colors group font-sans cursor-pointer" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">content_copy</span>
+<span class="text-sm font-medium">carmencavanaghdoherty@gmail.com</span>
+</a>
+<div class="flex items-center gap-6 mt-4">
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="https://www.instagram.com/carmencavanagh/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="mailto:carmencavanaghdoherty@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="https://www.tiktok.com/@carmencavanaghx" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.48-1.48 1.37-3.43 2.16-5.44 2.16-5.54 0-10.05-4.51-10.05-10.05 0-5.54 4.51-10.05 10.05-10.05.07 0 .13.01.2.01v4.03c-.04 0-.09-.01-.13-.01-3.32 0-6.02 2.7-6.02 6.02 0 3.32 2.7 6.02 6.02 6.02 3.32 0 6.02-2.7 6.02-6.02V.02z"/>
+        </svg>
+    </a>
+</div>
+</div>
+</div>
+<form class="flex flex-col gap-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<input class="h-16 px-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-1 focus:ring-primary focus:border-primary focus:outline-none transition-all font-sans" placeholder="Name" type="text"/>
+<input class="h-16 px-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-1 focus:ring-primary focus:border-primary focus:outline-none transition-all font-sans" placeholder="Email" type="email"/>
+</div>
+<textarea class="p-6 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:ring-1 focus:ring-primary focus:border-primary focus:outline-none resize-none transition-all font-sans" placeholder="How can we help?" rows="4"></textarea>
+<button class="mt-2 h-16 w-full sm:w-auto px-12 bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-full hover:bg-white hover:text-primary transition-all self-start font-sans" type="button">
+                        Send Message
+                    </button>
+</form>
+</div>
+<div class="w-full h-px bg-white/10 my-12"></div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/50 uppercase tracking-[1px] font-sans">
+<p>© 2026 Carmen Cavanagh Doherty. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col h-screen w-screen hidden">
+    <div class="flex items-center justify-between px-6 lg:px-24 h-24 border-b border-gray-100 flex-shrink-0">
+        <a href="index.html" class="flex items-center">
+            <img src="images/logo.png" alt="Carmen Cavanagh Doherty" class="h-12 w-auto object-contain" />
+        </a>
+        <button id="close-menu-btn" class="p-2 text-pink hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col flex-1 px-8 py-8 gap-2 overflow-y-auto">
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html">
+            Home
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#about">
+            About
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#shop">
+            Shop
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        <a class="text-lg font-bold uppercase tracking-[1px] text-pink hover:text-primary hover:pl-2 transition-all duration-300 mobile-link py-4 border-b border-gray-50 font-sans flex justify-between items-center group" href="index.html#contact">
+            Contact
+            <span class="material-symbols-outlined text-gray-300 group-hover:text-primary transition-colors text-xl">arrow_forward</span>
+        </a>
+        
+        <div class="mt-8">
+            <a href="index.html#shop" class="flex items-center justify-center h-14 w-full bg-primary text-white text-sm font-bold uppercase tracking-[1px] rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 font-sans mobile-link">
+                Shop Digital Tools
+            </a>
+        </div>
+        
+        <div class="flex items-center justify-center gap-6 mt-8">
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60 relative" href="cart.html" title="Cart">
+                <span class="material-symbols-outlined text-lg">shopping_bag</span>
+                <span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full font-bold border-2 border-white">1</span>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="signup.html" title="Profile">
+                <span class="material-symbols-outlined text-lg">person</span>
+            </a>
+            <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all text-onyx/60" href="https://www.instagram.com/carmencavanagh/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="mailto:carmencavanaghdoherty@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+    </a>
+    <a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white" href="https://www.tiktok.com/@carmencavanaghx" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.48-1.48 1.37-3.43 2.16-5.44 2.16-5.54 0-10.05-4.51-10.05-10.05 0-5.54 4.51-10.05 10.05-10.05.07 0 .13.01.2.01v4.03c-.04 0-.09-.01-.13-.01-3.32 0-6.02 2.7-6.02 6.02 0 3.32 2.7 6.02 6.02 6.02 3.32 0 6.02-2.7 6.02-6.02V.02z"/>
+        </svg>
+    </a>
+</div>
+</div>
+</div>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        const isClosed = mobileMenu.classList.contains('translate-x-full');
+        
+        if (isClosed) {
+            // Open Menu
+            mobileMenu.classList.remove('hidden');
+            // Small delay to ensure browser registers visibility change before transform
+            requestAnimationFrame(() => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // Close Menu
+            mobileMenu.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+            
+            // Wait for transition to complete before hiding
+            mobileMenu.addEventListener('transitionend', function handler() {
+                if (mobileMenu.classList.contains('translate-x-full')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                mobileMenu.removeEventListener('transitionend', handler);
+            }, { once: true });
+        }
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+
+    // Email Copy Functionality
+    const emailCopyLink = document.getElementById('email-copy-link');
+    if (emailCopyLink) {
+        emailCopyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = "carmencavanaghdoherty@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const textSpan = this.querySelector('span.text-sm');
+                const originalText = textSpan.innerText;
+                textSpan.innerText = "Copied to clipboard!";
+                
+                setTimeout(() => {
+                    textSpan.innerText = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        });
+    }
+</script>
+<script src="js/cart.js"></script>
+</body></html>
